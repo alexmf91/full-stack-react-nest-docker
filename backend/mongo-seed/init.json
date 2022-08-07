@@ -1,0 +1,56 @@
+[
+  {
+    "name": "cepsa",
+    "bottles": [
+      { "capacity": 1, "units": "liters", "price": 3.7 },
+      { "capacity": 3, "units": "liters", "price": 9.5 },
+      { "capacity": 5, "units": "liters", "price": 14 },
+      { "capacity": 15, "units": "liters", "price": 41 }
+    ]
+  },
+  {
+    "name": "repsol",
+    "bottles": [
+      { "capacity": 1, "units": "liters", "price": 3.5 },
+      { "capacity": 3, "units": "liters", "price": 9.9 },
+      { "capacity": 5, "units": "liters", "price": 14.7 },
+      { "capacity": 15, "units": "liters", "price": 42 }
+    ]
+  },
+  {
+    "name": "bp",
+    "bottles": [
+      { "capacity": 1, "units": "liters", "price": 3.9 },
+      { "capacity": 3, "units": "liters", "price": 10.5 },
+      { "capacity": 5, "units": "liters", "price": 14.9 },
+      { "capacity": 15, "units": "liters", "price": 41 }
+    ]
+  },
+  {
+    "name": "shell",
+    "bottles": [
+      { "capacity": 1, "units": "liters", "price": 3.6 },
+      { "capacity": 3, "units": "liters", "price": 10.3 },
+      { "capacity": 5, "units": "liters", "price": 14.4 },
+      { "capacity": 15, "units": "liters", "price": 41.2 }
+    ]
+  },
+  {
+    "name": "elf",
+    "bottles": [
+      { "capacity": 1, "units": "liters", "price": 3.8 },
+      { "capacity": 3, "units": "liters", "price": 10.2 },
+      { "capacity": 5, "units": "liters", "price": 14.5 },
+      { "capacity": 15, "units": "liters", "price": 41.7 }
+    ]
+  },
+  {
+    "name": "galp",
+    "bottles": [
+      { "capacity": 1, "units": "liters", "price": 3.6 },
+      { "capacity": 3, "units": "liters", "price": 10.1 },
+      { "capacity": 5, "units": "liters", "price": 14.4 },
+      { "capacity": 15, "units": "liters", "price": 41.8 }
+    ]
+  }
+]
