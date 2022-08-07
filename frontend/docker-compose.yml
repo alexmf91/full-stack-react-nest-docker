@@ -1,0 +1,9 @@
+version: '3'
+services:
+  noister-front:
+    container_name: noister-front
+    image: noister-front:1.0.0
+    build: .
+    ports:
+      - 3000:80
+    restart: unless-stopped
