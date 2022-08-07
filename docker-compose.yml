@@ -1,0 +1,45 @@
+version: "3"
+services:
+  noister-front:
+    image: noister-front:1.0.0
+    container_name: noister-front
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:80
+    restart: unless-stopped
+
+  gasazon-api:
+    image: gasazon-api:1.0.0
+    container_name: gasazon-api
+    build:
+      context: backend
+      target: production
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    restart: unless-stopped
+    networks:
+      - noister-network
+
+  mongo:
+    image: mongo:latest
+    container_name: noister-mongodb
+    ports:
+      - 27017:27017
+    volumes:
+      - ./backend/data/db:/data/db
+    networks:
+      - noister-network
+
+  mongo-seed:
+    build:
+      context: backend/mongo-seed
+    links:
+      - mongo
+    networks:
+      - noister-network
+
+networks:
+  noister-network:
