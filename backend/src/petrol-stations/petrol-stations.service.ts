@@ -40,18 +40,4 @@ export class PetrolStationsService {
       )
     ]);
   }
-  // updatePrices() {
-  //   console.log('updatingPrices');
-  //   return this.petrolStationModel.updateMany(
-  //     {},
-  //     { $inc: { 'bottles.$[elem].price': 0.1 } },
-  //     {
-  //       arrayFilters: [
-  //         {
-  //           'elem.price': { $gte: 9, $lte: 10.5 }
-  //         }
-  //       ]
-  //     }
-  //   );
-  // }
 }
