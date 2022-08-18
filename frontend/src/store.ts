@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import gasazonReducer from '@noister/features/Gasazon/gasazon.slice'
+import gasazonReducer from '@noister/pages/gasazon/gasazon.slice'
 import { apiSlice } from './api/api.slice'
 
 export const store = configureStore({
