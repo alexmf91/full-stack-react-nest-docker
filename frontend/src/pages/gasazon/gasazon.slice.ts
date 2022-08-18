@@ -1,11 +1,11 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { RootState } from '@noister/store'
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
+import type { RootState } from '@noister/store'
 import { client } from '@noister/api/client'
 import { PetrolStation } from './types'
 
 interface GasazonState {
   petrolStations: Array<PetrolStation> | []
-  bottlesCombination: {}
+  bottlesCombination: Record<number, number>
 }
 
 const initialState: GasazonState = {
@@ -22,7 +22,11 @@ export const gasazonSlice = createSlice({
   name: 'gasazon',
   initialState,
   reducers: {
-    setBottlesCombination(state, action) {
+    setBottlesCombination(
+      state: GasazonState,
+      action: PayloadAction<Record<number, number>>
+    ) {
+      // eslint-disable-next-line no-param-reassign
       state.bottlesCombination = action.payload
     }
   }
