@@ -6,7 +6,7 @@ interface Props {
 
 function AppLayout({ children }: Props) {
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className="flex flex-col min-h-screen">
       <Header />
       <main>{children}</main>
       <Footer />
