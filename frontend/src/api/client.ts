@@ -3,17 +3,18 @@ export async function client(endpoint: string, customConfig = {}) {
     ...customConfig,
     headers: { 'Content-Type': 'application/json' }
   }
-  let data
+  let data: unknown
   try {
     const response = await window.fetch(endpoint, config)
     data = await response.json()
 
     return data
-  } catch (error: any) {
-    return Promise.reject(error.message ? error.message : data)
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      return Promise.reject(error.message ? error.message : data)
+    }
+    return 'Unexpected error'
   }
 }
 
-client.get = function (endpoint: string) {
-  return client(endpoint, { method: 'GET' })
-}
+client.get = (endpoint: string) => client(endpoint, { method: 'GET' })
