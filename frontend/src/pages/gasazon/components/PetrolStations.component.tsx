@@ -7,7 +7,11 @@ import { COLUMNS } from '../constants'
 
 function PetrolStationsList() {
   const { bottlesCombination } = useAppSelector(gasazonSelector)
-  const { data: petrolStations = [], isLoading, isError } = useGetPetrolStationsQuery(null, {
+  const {
+    data: petrolStations,
+    isLoading,
+    isError
+  } = useGetPetrolStationsQuery([], {
     pollingInterval: 30000
   })
 
@@ -50,7 +54,9 @@ function PetrolStationsList() {
                     {bottle.price.toFixed(3)}€
                   </td>
                 ))}
-                <td className="py-4 px-6 font-bold text-gray-500">{totalPrice.toFixed(3)} €</td>
+                <td className="py-4 px-6 font-bold text-gray-500">
+                  {totalPrice.toFixed(3)} €
+                </td>
               </tr>
             )
           })}
