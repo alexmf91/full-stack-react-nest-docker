@@ -1,2 +1,2 @@
-export { default as Home } from './Home.view'
-export { default as Gasazon } from './gasazon/Gasazon.view'
+export { Home } from './home'
+export { Gasazon } from './gasazon'
