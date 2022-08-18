@@ -16,9 +16,7 @@ export default function TabBar({ tabs }: TabBarProps) {
               <NavLink
                 to={tab.toLocaleLowerCase().replace(' ', '-')}
                 className={({ isActive }) =>
-                  isActive
-                    ? `${linkStyles} border-b-4 border-amber-500 `
-                    : linkStyles
+                  isActive ? `${linkStyles} border-b-4 border-amber-500 ` : linkStyles
                 }
               >
                 {tab}
