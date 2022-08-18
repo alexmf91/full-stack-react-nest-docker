@@ -9,7 +9,8 @@ export function calculateTotalPrice(
 
   return Object.entries(bottlesCombination).reduce(
     (acc: number, [size, quantity]: Array<string>) => {
-      const bottle = map.get(+size)
+      const bottle = map.get(+size) as Bottle
+      // eslint-disable-next-line no-param-reassign
       acc += bottle.price * +quantity
       return acc
     },
