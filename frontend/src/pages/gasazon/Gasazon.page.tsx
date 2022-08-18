@@ -1,9 +1,9 @@
 import { Routes, Route, Outlet, Navigate } from 'react-router-dom'
-import { PageLayout } from '@noister/layouts'
+import { PageLayout } from '@noister/components/layouts'
 import { TabBar } from '@noister/components'
-import { BottlesCalculator, PetrolStations } from '@noister/pages/gasazon/components'
+import { BottlesCalculator, PetrolStations } from './components'
 
-const GasazonRouter = () => {
+function GasazonRouter() {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="petrol-stations" replace />} />
@@ -17,7 +17,7 @@ function Gasazon() {
 
   return (
     <>
-      <TabBar tabs={tabs}></TabBar>
+      <TabBar tabs={tabs} />
       <PageLayout>
         <BottlesCalculator />
         <GasazonRouter />
