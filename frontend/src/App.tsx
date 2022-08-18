@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom'
 
-import { AppLayout } from '@noister/layouts'
+import { AppLayout } from '@noister/components/layouts'
 import { Home, Gasazon } from '@noister/pages'
 
 function App() {
